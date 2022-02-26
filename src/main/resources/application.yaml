@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /api-estudiantes
+  port: 8080
+# Spring properties
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: update
+        order_inserts: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 50
+          lob:
+            non_contextual_creation: true
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://ec2-3-227-195-74.compute-1.amazonaws.com:5432/d6ti2bmukjarfi
+    driver-class-name: org.postgresql.Driver
+    username: kristsfeihhlwy
+    password: 879dc960fbb4583f8bca83773acae7976e26a9b39d48361bfcf3f0734b7a6c7b
